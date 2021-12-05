@@ -16,11 +16,15 @@
         <strong>Pulsa el boton para Escanear tu codigo QR</strong>
     </div>
     <br>
-    <ion-button expand="full" (click)="scan()+bounce()" #bouncebtn>
+    <ion-button expand="full" (click)="scan()" #bouncebtn>
         Escanear
         <ion-icon name="checkmark"></ion-icon>
     </ion-button>
     {{code}}
+    <ion-button expand="full" (click)="send()" #bouncebtn>
+        Mandar Informacion por Correo
+        <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
 
     <ion-item>
         <ion-button (click)="volver()"> Cerrar Sesion</ion-button>

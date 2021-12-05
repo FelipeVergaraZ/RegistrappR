@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import * as Bounce from 'bounce.js';
 
 
@@ -13,8 +14,12 @@ export class InicioPage implements OnInit {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   NombreU: string;
   code: any;
+  body='';
+  subject='prueba asunto';
+  to='headpollo@gmail.com';
 
-  constructor(private activeRoute: ActivatedRoute,private router: Router, private barcodeScanner: BarcodeScanner) {
+  // eslint-disable-next-line max-len
+  constructor(private activeRoute: ActivatedRoute,private router: Router, private barcodeScanner: BarcodeScanner, private emailComposer: EmailComposer) {
     this.activeRoute.queryParamMap.subscribe(params=>{
       if(this.router.getCurrentNavigation().extras.state){
         this.NombreU=this.router.getCurrentNavigation().extras.state.NombreU;
@@ -34,6 +39,27 @@ export class InicioPage implements OnInit {
         console.log('Error', err);
     });
   }
+
+
+
+
+send(){
+  const email = {
+    to: 'headpollo@gmail.com',
+    cc: [],
+    bcc: [],
+    attachments: [],
+    subject: 'Prueba',
+    body: this.code,
+    isHtml: true,
+  };
+  console.log('se mando el correo');
+
+// Send a text message using default options
+this.emailComposer.open(email);
+}
+
+
 
   ngOnInit() {
   }
