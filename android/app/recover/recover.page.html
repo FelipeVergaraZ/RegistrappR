@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-tittle>
+            Recuperar Contraseña
+        </ion-tittle>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item>
+        <ion-label position="floating">Ingresar Correo/ Usuario</ion-label>
+        <ion-input type="text"></ion-input>
+    </ion-item>
+    <br>
+
+    <br>
+    <ion-button expand="full" (click)="enviocuenta()">Recuperar Cuenta</ion-button>
+
+    <ion-item>
+        <ion-button (click)="volver()"> Volver Atras</ion-button>
+    </ion-item>
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            RegistrAPP
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <img src="assets/img/Duoc.png" />
+        <ion-card-header>
+            <ion-card-subtitle>Bienvenid@ a RegistrAPP</ion-card-subtitle>
+            <ion-card-title>Porfavor Inicie Sesion con suenta Duoc</ion-card-title>
+        </ion-card-header>
+    </ion-card>
+
+    <form [formGroup]= "formularioLogin">
+        <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="text" [(ngModel)]="NombreU" formControlName="NombreU"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+    </form>
+
+    <br>
+    <ion-item>
+        <ion-button  (click)="logearse()">
+            Iniciar Sesion
+            <ion-icon name="checkmark"></ion-icon>
+        </ion-button>
+        <ion-button (click)="logearse2()">
+            <ion-icon name="checkmark"></ion-icon>
+        </ion-button>
+    </ion-item>
+    <ion-button expand="full" (click)="registrar()">
+        Registrar una cuenta
+        <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+
+
+    <ion-card>
+        <ion-item>
+            <ion-label>¿Olvidaste tu contraseña?</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-button (click)="recuperar()"> Recuperar Contraseña</ion-button>
+        </ion-item>
+
+    </ion-card>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-title>
+          RegistrAPP
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+      <img src="assets/img/Duoc.png" />
+      <ion-card-header>
+          <ion-card-subtitle>Bienvenid@ al registro de RegistrAPP</ion-card-subtitle>
+          <ion-card-title>¿No tienes cuenta?</ion-card-title>
+      </ion-card-header>
+
+<ion-item>
+  <ion-label>ingrese sus datos para el registro</ion-label>
+</ion-item>
+
+<form [formGroup]= "formularioRegistro">
+  <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" formControlName="NombreU"></ion-input>
+  </ion-item>
+  
+  <br>
+  <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+</form>
+
+<ion-button expand="full" (click)="guardar()">
+    Registrar cuenta
+    <ion-icon name="checkmark"></ion-icon>
+</ion-button>
+<ion-item>
+  <ion-button (click)="volver()"> atras</ion-button>
+</ion-item>

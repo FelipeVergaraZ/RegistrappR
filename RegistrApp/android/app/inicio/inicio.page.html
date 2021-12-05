@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            RegistrAPP
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item>
+        <ion-label>Bienvenido {{NombreU}}</ion-label>
+    </ion-item>
+
+
+    <div id="container">
+        <strong>Pulsa el boton para Escanear tu codigo QR</strong>
+    </div>
+    <br>
+    <ion-button expand="full" (click)="alerta()+bounce()" #bouncebtn>
+        Escanear
+        <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+    <ion-item>
+        <ion-button (click)="volver()"> Cerrar Sesion</ion-button>
+    </ion-item>
+
+
+
+</ion-content>

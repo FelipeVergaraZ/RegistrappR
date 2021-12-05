@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Alumnos</ion-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-select placeholder="lista" [(ngModel)]="user">
+        <ion-select-option *ngFor="let usu of users" [value]="usu">{{usu.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <br>
+  <ion-card>
+    <ion-list-header>
+      <ion-title>Asistencia</ion-title>
+    </ion-list-header>   
+    <ion-list>  
+      <ion-item *ngFor="let post of posts">
+        <ion-label><h4>{{post.title}}</h4><p>{{post.body}}</p></ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-item>
+    <ion-button (click)="volver()"> atras</ion-button>
+  </ion-item>
+</ion-content>
