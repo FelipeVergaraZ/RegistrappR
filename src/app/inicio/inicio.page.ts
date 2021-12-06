@@ -14,9 +14,7 @@ export class InicioPage implements OnInit {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   NombreU: string;
   code: any;
-  body='';
-  subject='prueba asunto';
-  to='headpollo@gmail.com';
+
 
   // eslint-disable-next-line max-len
   constructor(private activeRoute: ActivatedRoute,private router: Router, private barcodeScanner: BarcodeScanner, private emailComposer: EmailComposer) {
@@ -45,12 +43,12 @@ export class InicioPage implements OnInit {
 
 send(){
   const email = {
-    to: 'headpollo@gmail.com',
+    to: 'mart.torresg@duocuc.cl',
     cc: [],
     bcc: [],
     attachments: [],
-    subject: 'Prueba',
-    body: this.code,
+    subject: 'Correo de prueba',
+    body: this.code.value,
     isHtml: true,
   };
   console.log('se mando el correo');
