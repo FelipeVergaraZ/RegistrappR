@@ -11,7 +11,7 @@
         <img src="assets/img/Duoc.png" />
         <ion-card-header>
             <ion-card-subtitle>Bienvenid@ a RegistrAPP</ion-card-subtitle>
-            <ion-card-title>Porfavor Inicie Sesion con suenta Duoc</ion-card-title>
+            <ion-card-title>Porfavor Inicie Sesion Con su Cuenta Duoc</ion-card-title>
         </ion-card-header>
     </ion-card>
 
@@ -28,19 +28,17 @@
     </form>
 
     <br>
+    <ion-button expand="full" (click)="logearse()">
+        Iniciar Sesion
+        <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
     <ion-item>
-        <ion-button  (click)="logearse()">
-            Iniciar Sesion
-            <ion-icon name="checkmark"></ion-icon>
-        </ion-button>
-        <ion-button (click)="logearse2()">
+        <ion-button (click)="registrar()">
+            Registrar una cuenta
             <ion-icon name="checkmark"></ion-icon>
         </ion-button>
     </ion-item>
-    <ion-button expand="full" (click)="registrar()">
-        Registrar una cuenta
-        <ion-icon name="checkmark"></ion-icon>
-    </ion-button>
+
 
 
     <ion-card>

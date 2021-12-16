@@ -43,7 +43,7 @@ export class InicioPage implements OnInit {
 
 send(){
   const email = {
-    to: 'mart.torresg@duocuc.cl',
+    to: 'NAN.BERNAL@profesor.duoc.cl',
     cc: [],
     bcc: [],
     attachments: [],
